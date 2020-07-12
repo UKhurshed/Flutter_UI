@@ -1,4 +1,4 @@
-# flutter_ui
+# UI/UX Design Practice with Flutter
 
 A new Flutter application.
 
