@@ -1,26 +1,79 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/pages/create_post.dart';
+import 'package:flutter_ui/pages/home.dart';
+import 'package:flutter_ui/pages/notifications.dart';
+import 'package:flutter_ui/pages/profile.dart';
+import 'package:flutter_ui/pages/search.dart';
 
-void main() => runApp(HomePage());
+void main() => runApp(MyApp());
 
-class HomePage extends StatelessWidget{
+class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter UI',
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('Main',
-              style: TextStyle(fontWeight: FontWeight.bold),),
-          ),
-          body: Center(
-            child: Container(
-              child: Text('Hello There',
-                style: TextStyle(fontSize: 25),),
-            ),
-          ),
+        title: 'Instagram',
+        theme: ThemeData(
+          primarySwatch: Colors.blue
         ),
+        home: MyHomePage()
       );
     }
+}
+
+class MyHomePage extends StatefulWidget{
+
+  @override
+  _MyHomePage createState() => _MyHomePage();
+
+}
+
+class _MyHomePage extends State<MyHomePage>{
+
+  List<Widget> pages = [
+    HomePage(),
+    SearchPage(),
+    CreatePostPage(),
+    NotificationPage(),
+    ProfilePage(),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 5,
+      initialIndex: 0,
+      child: Scaffold(
+        body: TabBarView(
+          children: pages,
+        ),
+        bottomNavigationBar: Container(
+          margin: const EdgeInsets.only(bottom: 30),
+          child: new TabBar(
+            tabs: [
+              Tab(
+                icon: Icon(Icons.home),
+              ),
+              Tab(
+                icon: Icon(Icons.search),
+              ),
+              Tab(
+                icon: Icon(Icons.add),
+              ),
+              Tab(
+                icon: Icon(Icons.favorite),
+              ),
+              Tab(
+                icon: Icon(Icons.perm_identity),
+              ),
+            ],
+            unselectedLabelColor: Colors.black,
+            labelColor: Colors.blue,
+            indicatorColor: Colors.transparent,
+          ),
+        ),
+      ),
+    );
+
+  }
 }
