@@ -33,6 +33,7 @@ class _HomePage extends State<HomePage>{
         title: Text("Instagram",
             style: textStyleBold
         ),
+        leading: Icon(Icons.camera_alt, color: Colors.black,),
         backgroundColor: Colors.white,
       ),
       body: Container(
@@ -79,28 +80,28 @@ class _HomePage extends State<HomePage>{
       child: Column(
         children: [
           Container(
-            height: 50,
-            width: 50,
+            height: 60,
+            width: 60,
             child: Stack(
               alignment: Alignment(0, 0),
               children: [
                 Container(
-                  height: 50,
-                  width: 50,
+                  height: 60,
+                  width: 60,
                   child: CircleAvatar(
                     backgroundColor: follower.hasStory ? Colors.red : Colors.grey,
                   ),
                 ),
                 Container(
-                  height: 47,
-                  width: 47,
+                  height: 57,
+                  width: 57,
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
                   ),
                 ),
                 Container(
-                  height: 45,
-                  width: 45,
+                  height: 55,
+                  width: 55,
                   child: CircleAvatar(
                     backgroundImage: follower.profilePicture,
                   ),
@@ -147,7 +148,7 @@ class _HomePage extends State<HomePage>{
                         backgroundImage: post.user.profilePicture,
                       ),
                     ),
-                    Text(post.user.username),
+                    Text(post.user.username, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
                   ],
                 ),
                 IconButton(
@@ -167,7 +168,8 @@ class _HomePage extends State<HomePage>{
             ),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: post.image
+                image: post.image,
+                fit: BoxFit.cover
               )
             ),
           ),
@@ -398,11 +400,11 @@ class _HomePage extends State<HomePage>{
               Stack(alignment: Alignment(0, 0),
                 children: [
                   Container(
-                    child: Icon(Icons.favorite, color: Colors.black, size: 15),
+                    child: Icon(Icons.favorite, color: Colors.black, size: 25),
                   ),
                   Container(
                     child: IconButton(
-                      icon: Icon(Icons.favorite, color: comment.isLiked ? Colors.black : Colors.white, size: 10),
+                      icon: Icon(Icons.favorite, color: comment.isLiked ? Colors.black : Colors.white, size: 20),
                       onPressed: (){
                         setState(() {
                           comment.isLiked = comment.isLiked ? false : true;

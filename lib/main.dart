@@ -48,27 +48,27 @@ class _MyHomePage extends State<MyHomePage>{
           children: pages,
         ),
         bottomNavigationBar: Container(
-          margin: const EdgeInsets.only(bottom: 30),
+          margin: const EdgeInsets.only(bottom: 8),
           child: new TabBar(
             tabs: [
               Tab(
-                icon: Icon(Icons.home),
+                icon: Icon(Icons.home, size: 32,),
               ),
               Tab(
-                icon: Icon(Icons.search),
+                icon: Icon(Icons.search, size: 32,),
               ),
               Tab(
-                icon: Icon(Icons.add),
+                icon: Icon(Icons.add, size: 32, ),
               ),
               Tab(
-                icon: Icon(Icons.favorite),
+                icon: Icon(Icons.favorite, size: 32,),
               ),
               Tab(
-                icon: Icon(Icons.perm_identity),
+                icon: Icon(Icons.perm_identity, size: 33,),
               ),
             ],
             unselectedLabelColor: Colors.black,
-            labelColor: Colors.blue,
+            labelColor: Colors.black54,
             indicatorColor: Colors.transparent,
           ),
         ),
