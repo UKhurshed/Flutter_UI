@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/constants.dart';
+import 'package:flutter_ui/screens/home_screen.dart';
 
 void main() => runApp(HomePage());
 
@@ -8,19 +10,16 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter UI',
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('Main',
-              style: TextStyle(fontWeight: FontWeight.bold),),
-          ),
-          body: Center(
-            child: Container(
-              child: Text('Hello There',
-                style: TextStyle(fontSize: 25),),
-            ),
-          ),
+        title: 'Food App',
+        theme: ThemeData(
+          primaryColor: kPrimaryColor,
+          scaffoldBackgroundColor: Colors.white,
+          textTheme: TextTheme(
+            bodyText1: TextStyle(color: ksecondaryColor),
+            bodyText2: TextStyle(color: ksecondaryColor),
+          )
         ),
+        home: HomeScreen(),
       );
     }
 }
