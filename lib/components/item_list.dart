@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/details/details_screen.dart';
+import 'package:flutter_ui/screens/details_screen.dart';
 
 import 'item_card.dart';
 
