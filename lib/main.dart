@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/MainDrawer.dart';
+
+import 'AppBar.dart';
+import 'home.dart';
 
 void main() => runApp(HomePage());
 
-class HomePage extends StatelessWidget{
+class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter UI',
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('Main',
-              style: TextStyle(fontWeight: FontWeight.bold),),
-          ),
-          body: Center(
-            child: Container(
-              child: Text('Hello There',
-                style: TextStyle(fontSize: 25),),
-            ),
-          ),
-        ),
-      );
-    }
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'VVMarket',
+      home: Scaffold(
+        appBar: homeAppBar(context),
+        body: Home(),
+        drawer: MainDrawer(),
+      ),
+    );
+  }
 }
