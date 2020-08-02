@@ -6,6 +6,9 @@ import 'package:flutter_ui/screens/crm.dart';
 import 'package:flutter_ui/screens/documents.dart';
 import 'package:flutter_ui/screens/reports.dart';
 
+import 'AppBar.dart';
+import 'MainDrawer.dart';
+
 
 class Home extends StatefulWidget {
 
@@ -33,7 +36,7 @@ class _Home extends State<Home> {
       BottomNavigationBar(
 //        selectedIconTheme: IconThemeData(color: Colors.white),
 //        unselectedIconTheme: IconThemeData(color: Colors.white),
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Colors.blue[600],
         unselectedItemColor: Colors.black,
         onTap: (int index) => setState(() => _currentIndex = index),
         currentIndex: currentIndex,
@@ -70,6 +73,8 @@ class _Home extends State<Home> {
   Scaffold HomeScaffold() {
     return Scaffold(
       bottomNavigationBar: _bottomNavigationBar(_currentIndex),
+        appBar: homeAppBar(),
+        drawer: MainDrawer(),
       body: PageStorage(
         child: pages[_currentIndex],
         bucket: bucket,

@@ -10,6 +10,8 @@ class HomePage extends StatelessWidget {
         child: Text('Приветствуем!',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),),
       ),
+//      appBar: homeAppBar(context),
+//      drawer: MainDrawer(),
     );
   }
 }
