@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class LoginField extends StatelessWidget {
+  final String hint_txt;
   const LoginField({
+    this.hint_txt,
     Key key,
   }) : super(key: key);
 
@@ -16,7 +18,7 @@ class LoginField extends StatelessWidget {
       child: TextField(
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
-            hintText: "Email",
+            hintText: hint_txt,
             hintStyle: TextStyle(
                 color: Colors.grey[700]),
             border: InputBorder.none

@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/components/MainDrawer.dart';
-import 'package:flutter_ui/screens/Welcome/welcome_screen.dart';
-
-import 'components/AppBar.dart';
-import 'components/home.dart';
-
+import 'package:flutter_ui/screens/Login/login_screen.dart';
 void main() => runApp(HomePage());
 
 class HomePage extends StatelessWidget {
@@ -15,7 +10,7 @@ class HomePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'VVMarket',
       home: Scaffold(
-        body: WelcomeScreen()
+        body: SignInScreen()
       ),
     );
   }

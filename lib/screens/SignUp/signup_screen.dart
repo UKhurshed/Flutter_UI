@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_ui/screens/SignUp/components/first_name_field.dart';
 import 'package:flutter_ui/screens/SignUp/components/last_name_field.dart';
-import 'package:flutter_ui/screens/SignUp/components/login_field.dart';
-import 'package:flutter_ui/screens/SignUp/components/password_field.dart';
-
-import 'components/signin_navigator.dart';
-import 'components/signup_rounded_button.dart';
+import 'package:flutter_ui/screens/components/login_field.dart';
+import 'package:flutter_ui/screens/components/password_field.dart';
+import 'package:flutter_ui/screens/components/sign_in_up_navigator.dart';
+import 'package:flutter_ui/screens/components/sign_rounded_button.dart';
 
 class signup extends StatelessWidget{
 
@@ -91,15 +90,15 @@ class SignUpContainer extends StatelessWidget {
                                 children: [
                                   FirstNameField(),
                                   LastNameField(),
-                                  LoginField(),
+                                  LoginField(hint_txt: "SIGN UP",),
                                   PasswordField(),
                                 ],
                               ),
                             ),
                             SizedBox(height: 20),
-                            SignUpRoundedButton(),
+                            SignRoundedButton(signTxt: 'SIGN UP',),
                             SizedBox(height: 15),
-                            SignInNavigator(),
+                            SignNavigator(accountQuestion: "Already have an Account?", signTxt: 'Sign In', choiceSign: "signIn",),
                             SizedBox(height: 45),
                           ],
                         ),

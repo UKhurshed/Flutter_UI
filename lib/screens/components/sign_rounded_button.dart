@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/components/home.dart';
+import 'package:flutter_ui/screens/SignUp/signup_screen.dart';
 
-class SignUpRoundedButton extends StatelessWidget {
-  const SignUpRoundedButton({
+class SignRoundedButton extends StatelessWidget {
+  final String signTxt;
+  const SignRoundedButton({
     Key key,
+    this.signTxt,
   }) : super(key: key);
 
 
@@ -27,7 +30,7 @@ class SignUpRoundedButton extends StatelessWidget {
             ),
             );
           },
-          child: Text('SIGN UP', style: TextStyle(
+          child: Text(signTxt, style: TextStyle(
               color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
         ),
       ),

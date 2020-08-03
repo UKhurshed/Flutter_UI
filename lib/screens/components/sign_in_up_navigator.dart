@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/screens/Login/login_screen.dart';
 import 'package:flutter_ui/screens/SignUp/signup_screen.dart';
-import 'package:flutter_ui/screens/Welcome/welcome_screen.dart';
 
-class SignInNavigator extends StatelessWidget {
-  const SignInNavigator({
+class SignNavigator extends StatelessWidget {
+  final String accountQuestion;
+  final String signTxt;
+  final String choiceSign;
+  const SignNavigator({
     Key key,
+    this.accountQuestion,
+    this.choiceSign,
+    this.signTxt,
   }) : super(key: key);
 
   @override
@@ -13,19 +19,25 @@ class SignInNavigator extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Already have an Account?",
+            Text(accountQuestion,
               style: TextStyle(fontSize: 18),),
             FlatButton(
               onPressed: () {
                 Navigator.push(
                   context, MaterialPageRoute(
                     builder: (context) {
-                      return WelcomeScreen();
+                      if(choiceSign == 'signIn'){
+                        return SignInScreen();
+                      }
+                      else{
+                        return signup();
+                      }
+
                     }
                 ),
                 );
               },
-              child: Text('Sign In', style: TextStyle(
+              child: Text(signTxt, style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18),
               ),
