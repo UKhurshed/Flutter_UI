@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:flutter_ui/screens/Home.dart';
 import 'package:flutter_ui/screens/Operations.dart';
 import 'package:flutter_ui/screens/crm.dart';
 import 'package:flutter_ui/screens/documents.dart';
 import 'package:flutter_ui/screens/reports.dart';
-
-import 'AppBar.dart';
-import 'MainDrawer.dart';
+import 'app_bar.dart';
+import 'main_drawer.dart';
 
 
 class Home extends StatefulWidget {
