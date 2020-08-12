@@ -19,7 +19,7 @@ class SignRoundedButton extends StatelessWidget {
       width: size.width * 0.65,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(29),
-        child: FlatButton(
+        child: MaterialButton(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
           color: Colors.blue[700],
           onPressed: () {
@@ -30,8 +30,10 @@ class SignRoundedButton extends StatelessWidget {
             ),
             );
           },
-          child: Text(signTxt, style: TextStyle(
-              color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
+          child: Align(
+            child: Text(signTxt, style: TextStyle(
+                color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
+          ),
         ),
       ),
     );

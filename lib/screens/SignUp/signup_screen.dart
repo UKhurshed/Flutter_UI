@@ -90,7 +90,7 @@ class SignUpContainer extends StatelessWidget {
                                 children: [
                                   FirstNameField(),
                                   LastNameField(),
-                                  LoginField(hint_txt: "SIGN UP",),
+                                  LoginField(hint_txt: "E-mail",),
                                   PasswordField(),
                                 ],
                               ),

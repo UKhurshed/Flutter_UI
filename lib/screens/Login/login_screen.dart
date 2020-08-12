@@ -91,7 +91,7 @@ class MainContainer extends StatelessWidget {
                               ),
                               child: Column(
                                 children: <Widget>[
-                                  LoginField(hint_txt: "Имя"),
+                                  LoginField(hint_txt: "E-mail"),
                                   PasswordField(),
                                 ],
                               ),
