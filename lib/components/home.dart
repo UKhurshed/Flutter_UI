@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/screens/Home.dart';
-import 'package:flutter_ui/screens/Operations.dart';
-import 'package:flutter_ui/screens/crm.dart';
-import 'package:flutter_ui/screens/documents.dart';
-import 'package:flutter_ui/screens/reports.dart';
+import 'package:flutter_ui/presentation/Home.dart';
+import 'package:flutter_ui/presentation/Operations.dart';
+import 'package:flutter_ui/presentation/crm.dart';
+import 'package:flutter_ui/presentation/documents.dart';
+import 'package:flutter_ui/presentation/reports.dart';
 import 'app_bar.dart';
 import 'main_drawer.dart';
 

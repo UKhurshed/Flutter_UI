@@ -27,6 +27,13 @@ dependencies:
   http: ^0.12.2
   provider: ^4.3.2
   shared_preferences: ^0.5.8
+  bloc: ^6.0.1
+  flutter_bloc: ^6.0.1
+  rxdart: ^0.24.1
+  equatable: ^1.2.3
+  flutter_secure_storage: ^3.3.3
+  get_it: ^4.0.4
+  data_connection_checker: ^0.3.4
 
 
 

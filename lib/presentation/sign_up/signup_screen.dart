@@ -1,33 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_ui/screens/components/login_field.dart';
-import 'package:flutter_ui/screens/components/password_field.dart';
-import 'package:flutter_ui/screens/components/sign_rounded_button.dart';
-import 'components/forgot_password.dart';
-import 'package:flutter_ui/screens/components/sign_in_up_navigator.dart';
+import 'package:flutter_ui/presentation/components/password_field.dart';
+import 'package:flutter_ui/presentation/components/sign_in_up_navigator.dart';
+import 'package:flutter_ui/presentation/components/sign_rounded_button.dart';
+import 'package:flutter_ui/presentation/sign_in/signin_screen.dart';
+import 'components/first_name_field.dart';
+import 'components/last_name_field.dart';
 
-void main () => runApp(SignInScreen());
+class signup extends StatelessWidget{
 
-
-class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: MainContainer(),
+      body: SignUpContainer(),
     );
   }
 }
 
-class MainContainer extends StatelessWidget {
-  const MainContainer({
-    Key key,
-  }) : super(key: key);
-
+class SignUpContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: Column(
         children: [
           Container(
@@ -49,35 +44,37 @@ class MainContainer extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(20),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+//                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text('VVMarket',
                         style: TextStyle(
                             color: Colors.white, fontSize: 36),),
-                      Text("Login",
+                      Text("Sign Up",
                         style: TextStyle(
                             color: Colors.white, fontSize: 28),
                       ),
                       SizedBox(height: 10),
-
                     ],
                   ),
                 ),
                 SizedBox(height: 10),
                 Container(
-                  padding: const EdgeInsets.only(top: 25),
                   width: double.infinity,
+                  padding: const EdgeInsets.only(top: 20),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(60), topRight: Radius.circular(60)),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(60),
+                      topLeft: Radius.circular(60),
+                    ),
                   ),
                   child: Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(30),
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           children: [
-                            SizedBox(height: 20),
+                            SizedBox(height: 10),
                             Container(
                               decoration: BoxDecoration(
                                   color: Colors.white,
@@ -90,22 +87,22 @@ class MainContainer extends StatelessWidget {
                                   ]
                               ),
                               child: Column(
-                                children: <Widget>[
-                                  LoginField(hint_txt: "E-mail"),
+                                children: [
+                                  FirstNameField(),
+                                  LastNameField(),
+                                  InputField(hint: "E-mail",),
                                   PasswordField(),
                                 ],
                               ),
                             ),
-                            SizedBox(height: 10),
-                            ForgotPassword(),
                             SizedBox(height: 20),
-                            SignRoundedButton(signTxt: 'SIGN IN'),
+                            SignRoundedButton(signTxt: 'SIGN UP',),
                             SizedBox(height: 15),
-                            SignNavigator(accountQuestion: "Don't have an Account?", signTxt: 'Sign Up', choiceSign: "signUp",),
-                            SizedBox(height: 110),
+                            SignNavigator(accountQuestion: "Already have an Account?", signTxt: 'Sign In', choiceSign: "signIn",),
+                            SizedBox(height: 45),
                           ],
                         ),
-                      ),
+                      )
                     ],
                   ),
                 ),
@@ -117,10 +114,3 @@ class MainContainer extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-

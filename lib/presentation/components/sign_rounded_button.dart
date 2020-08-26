@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/components/home.dart';
-import 'package:flutter_ui/screens/SignUp/signup_screen.dart';
 
 class SignRoundedButton extends StatelessWidget {
   final String signTxt;
