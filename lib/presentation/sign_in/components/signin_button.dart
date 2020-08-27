@@ -28,7 +28,7 @@ class VVButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width * 65,
+      width: size.width * 0.65,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(29),
         child: MaterialButton(

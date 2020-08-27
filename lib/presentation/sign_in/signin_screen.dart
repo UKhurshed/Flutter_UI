@@ -8,7 +8,6 @@ import 'package:flutter_ui/components/home.dart';
 import 'package:flutter_ui/presentation/components/sign_in_up_navigator.dart';
 import 'package:flutter_ui/presentation/sign_in/components/signin_button.dart';
 import 'package:flutter_ui/presentation/sign_in/signin_bloc/signin_bloc.dart';
-import 'components/signin_login_header.dart';
 
 //class SignInScreen extends StatefulWidget {
 //  @override
@@ -186,10 +185,10 @@ class _SigninPage extends State<SignInPage> {
                             children: [
                               Text('VVMarket',
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 36),),
+                                    color: Colors.white, fontSize: 36, fontFamily: 'Montserrat'),),
                               Text("Sign In",
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 28),
+                                    color: Colors.white, fontSize: 28, fontFamily: 'Montserrat' ),
                               ),
                               SizedBox(height: 10),
                             ],
@@ -226,8 +225,8 @@ class _SigninPage extends State<SignInPage> {
                                       ),
                                       child: Column(
                                         children: [
-                                          InputField(hint: "Login", keyboard: TextInputType.emailAddress, controller: emailController,),
-                                          InputField(controller: passwordController,hint: "Password",isObscure: true,),
+                                          InputField(hint: "E-mail", keyboard: TextInputType.emailAddress, controller: emailController,),
+                                          InputField(controller: passwordController,hint: "Пароль",isObscure: true,),
                                         ],
                                       ),
                                     ),
@@ -299,86 +298,3 @@ class InputField extends StatelessWidget {
     );
   }
 }
-
-
-//SingleChildScrollView(
-//child: Column(
-//children: [
-//LoginHeader(),
-////                  SizedBox(height: 10),
-//Container(
-//padding: const EdgeInsets.only(top: 20),
-//width: double.infinity,
-//decoration: BoxDecoration(
-//color: Colors.white,
-//borderRadius: BorderRadius.only(
-//topLeft: Radius.circular(60),
-//topRight: Radius.circular(60)),
-//),
-//child: Column(
-//children: [
-//Padding(
-//padding: EdgeInsets.all(30),
-//child: Column(
-//children: [
-//SizedBox(height: 10),
-//Container(
-//decoration: BoxDecoration(
-//color: Colors.white,
-//borderRadius: BorderRadius.circular(10),
-//boxShadow: [
-//BoxShadow(
-//color:
-//Color.fromRGBO(225, 95, 27, .3),
-//blurRadius: 20,
-//offset: Offset(0, 10))
-//]),
-//child: Column(
-//children: [
-////                                    InputField(
-////                                      hint: "Email",
-////                                      controller: emailController,
-////                                      keyboard: TextInputType.emailAddress,
-////                                    ),
-//InputField(
-//controller: emailController,
-//keyboard: TextInputType.emailAddress,
-//hint: "Login",
-//),
-//SizedBox(height: 10),
-////                                    InputField(
-////                                      hint: "Password",
-////                                      controller: passwordController,
-////                                      isObscure: true,
-////                                    ),
-//InputField(
-//controller: passwordController,
-//hint: "Password",
-//isObscure: true,
-//),
-//SizedBox(height: 10),
-//VVButton(
-//title: "Sign In",
-//onPressed: () => submitUser(
-//context,
-//emailController.text,
-//passwordController.text),
-//),
-//SizedBox(height: 15),
-//SignNavigator(
-//accountQuestion: "Don't have an Account?",
-//signTxt: 'Sign Up',
-//choiceSign: "signUp",
-//),
-//],
-//),
-//),
-//],
-//),
-//),
-//],
-//),
-//),
-//],
-//),
-//);

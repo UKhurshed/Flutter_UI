@@ -48,10 +48,10 @@ class SignUpContainer extends StatelessWidget {
                     children: [
                       Text('VVMarket',
                         style: TextStyle(
-                            color: Colors.white, fontSize: 36),),
+                            color: Colors.white, fontSize: 36, fontFamily: 'Montserrat'),),
                       Text("Sign Up",
                         style: TextStyle(
-                            color: Colors.white, fontSize: 28),
+                            color: Colors.white, fontSize: 28, fontFamily: 'Montserrat'),
                       ),
                       SizedBox(height: 10),
                     ],
