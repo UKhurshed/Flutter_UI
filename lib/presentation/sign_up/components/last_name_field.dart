@@ -14,7 +14,7 @@ class LastNameField extends StatelessWidget {
         decoration: InputDecoration(
             hintText: "Фамилия",
             hintStyle: TextStyle(
-                color: Colors.grey[700]),
+                color: Colors.grey[700], fontFamily: 'Montserrat', fontWeight: FontWeight.w600),
             border: InputBorder.none
         ),
       ),

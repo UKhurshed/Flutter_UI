@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:flutter_ui/data/model/main_drawer_items.dart';
+import 'package:flutter_ui/data/main_drawer_items.dart';
 
 class MainDrawer extends StatelessWidget {
 

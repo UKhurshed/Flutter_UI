@@ -1,8 +1,12 @@
 part of 'signin_bloc.dart';
 
 @immutable
-abstract class SignInState {
+abstract class SignInState extends Equatable{
+
   const SignInState();
+
+  @override
+  List<Object> get props => [];
 }
 
 class SignInInitial extends SignInState {
@@ -14,31 +18,17 @@ class SignInLoading extends SignInState{
 }
 
 class SignInLoaded extends SignInState{
-  final UserAuth userAuth;
-  const SignInLoaded(this.userAuth);
-
-  @override
-  bool operator ==(Object o) {
-    if (identical(this, o)) return true;
-
-    return o is SignInLoaded && o.userAuth == userAuth;
-  }
-
-  @override
-  int get hashCode => userAuth.hashCode;
+  const SignInLoaded();
 }
 
 class SignInError extends SignInState{
   final String message;
-  const SignInError(this.message);
+  const SignInError({@required this.message});
+
 
   @override
-  bool operator ==(Object o) {
-    if (identical(this, o)) return true;
-
-    return o is SignInError && o.message == message;
-  }
+  String toString() => 'Login Failure {error: $message}';
 
   @override
-  int get hashCode => message.hashCode;
+  List<Object> get props => [message];
 }

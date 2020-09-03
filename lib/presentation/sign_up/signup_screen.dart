@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:flutter_ui/presentation/components/password_field.dart';
+import 'package:flutter_ui/components/home.dart';
+import 'package:flutter_ui/presentation/components/input_field.dart';
 import 'package:flutter_ui/presentation/components/sign_in_up_navigator.dart';
-import 'package:flutter_ui/presentation/components/sign_rounded_button.dart';
-import 'package:flutter_ui/presentation/sign_in/signin_screen.dart';
+import 'package:flutter_ui/presentation/components/signin_button.dart';
 import 'components/first_name_field.dart';
 import 'components/last_name_field.dart';
 
-class signup extends StatelessWidget{
-
+class signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,6 +17,10 @@ class signup extends StatelessWidget{
 }
 
 class SignUpContainer extends StatelessWidget {
+  // __signUpPressed(){
+  //   Navigator.push(context,
+  //       MaterialPage(builder: (context) => Home());
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -28,15 +31,11 @@ class SignUpContainer extends StatelessWidget {
           Container(
             width: double.infinity,
             decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    colors: [
-                      Colors.blue[900],
-                      Colors.blue[800],
-                      Colors.blue[400]
-                    ]
-                )
-            ),
+                gradient: LinearGradient(begin: Alignment.topCenter, colors: [
+              Colors.blue[900],
+              Colors.blue[800],
+              Colors.blue[400]
+            ])),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -46,12 +45,19 @@ class SignUpContainer extends StatelessWidget {
                   child: Column(
 //                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('VVMarket',
+                      Text(
+                        'VVMarket',
                         style: TextStyle(
-                            color: Colors.white, fontSize: 36, fontFamily: 'Montserrat'),),
-                      Text("Sign Up",
+                            color: Colors.white,
+                            fontSize: 36,
+                            fontFamily: 'Montserrat'),
+                      ),
+                      Text(
+                        "Sign Up",
                         style: TextStyle(
-                            color: Colors.white, fontSize: 28, fontFamily: 'Montserrat'),
+                            color: Colors.white,
+                            fontSize: 28,
+                            fontFamily: 'Montserrat'),
                       ),
                       SizedBox(height: 10),
                     ],
@@ -79,26 +85,45 @@ class SignUpContainer extends StatelessWidget {
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
-                                  boxShadow: [BoxShadow(
-                                      color: Color.fromRGBO(225, 95, 27, .3),
-                                      blurRadius: 20,
-                                      offset: Offset(0, 10)
-                                  )
-                                  ]
-                              ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Color.fromRGBO(225, 95, 27, .3),
+                                        blurRadius: 20,
+                                        offset: Offset(0, 10))
+                                  ]),
                               child: Column(
                                 children: [
                                   FirstNameField(),
                                   LastNameField(),
-                                  InputField(hint: "E-mail",),
-                                  PasswordField(),
+                                  InputField(
+                                    hint: "E-mail",
+                                  ),
+                                  InputField(
+                                    hint: 'Password',
+                                    isObscure: true,
+                                  )
+                                  // PasswordField(),
                                 ],
                               ),
                             ),
                             SizedBox(height: 20),
-                            SignRoundedButton(signTxt: 'SIGN UP',),
+                            VVButton(
+                              title: 'SIGN UP',
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) {
+                                    return Home();
+                                  }),
+                                );
+                              },
+                            ),
                             SizedBox(height: 15),
-                            SignNavigator(accountQuestion: "Already have an Account?", signTxt: 'Sign In', choiceSign: "signIn",),
+                            SignNavigator(
+                              accountQuestion: "Already have an Account?",
+                              signTxt: 'Sign In',
+                              choiceSign: "signIn",
+                            ),
                             SizedBox(height: 45),
                           ],
                         ),

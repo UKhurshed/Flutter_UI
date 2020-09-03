@@ -34,16 +34,6 @@ class VVButton extends StatelessWidget {
         child: MaterialButton(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
           color: Colors.blue[700],
-//          onPressed: () {
-//            Navigator.push(
-//              context,
-//              MaterialPageRoute(
-//                builder: (context) {
-//                  return Home();
-//                },
-//              ),
-//            );
-//          },
           onPressed: onPressed,
           child: Align(
             child: Text(
@@ -51,7 +41,7 @@ class VVButton extends StatelessWidget {
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.bold, fontFamily: 'Montserrat'),
             ),
           ),
         ),
