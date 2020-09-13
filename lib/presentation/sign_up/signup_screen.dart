@@ -93,8 +93,10 @@ class SignUpContainer extends StatelessWidget {
                                   ]),
                               child: Column(
                                 children: [
-                                  FirstNameField(),
-                                  LastNameField(),
+                                  InputField(
+                                    hint: 'Имя',
+                                  ),
+                                  InputField(hint: 'Фамилия'),
                                   InputField(
                                     hint: "E-mail",
                                   ),

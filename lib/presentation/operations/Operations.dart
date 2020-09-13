@@ -11,7 +11,7 @@ class Operations extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Ревизия', style: TextStyle(fontSize: 18),),
+            Text('Приход товара', style: TextStyle(fontSize: 18),),
           ],
         ),
       ),

@@ -20,7 +20,7 @@ class SignNavigator extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(accountQuestion,
-              style: TextStyle(fontSize: 18, fontFamily: 'Montserrat', fontWeight: FontWeight.w600),),
+              style: TextStyle(fontSize: 18, fontFamily: 'Montserrat-Light', fontWeight: FontWeight.w600),),
             FlatButton(
               onPressed: () {
                 Navigator.push(
@@ -39,7 +39,7 @@ class SignNavigator extends StatelessWidget {
               },
               child: Text(signTxt, style: TextStyle(
                   fontWeight: FontWeight.w600,
-                  fontSize: 18, fontFamily: 'Montserrat'),
+                  fontSize: 18, fontFamily: 'Montserrat-Light'),
               ),
             )
           ],

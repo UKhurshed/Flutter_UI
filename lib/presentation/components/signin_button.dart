@@ -41,7 +41,7 @@ class VVButton extends StatelessWidget {
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
-                  fontWeight: FontWeight.bold, fontFamily: 'Montserrat'),
+                   fontFamily: 'Montserrat-Regular'),
             ),
           ),
         ),

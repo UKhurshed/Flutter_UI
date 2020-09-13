@@ -3,8 +3,8 @@ import 'package:flutter/painting.dart';
 import 'package:flutter_ui/data/main_drawer_items.dart';
 
 class MainDrawer extends StatelessWidget {
-
   List<MainDrawerItems> _drawerItems = itemsList;
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -12,19 +12,16 @@ class MainDrawer extends StatelessWidget {
         children: [
           UserAccountsDrawerHeader(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                colors: [Colors.blue[800], Colors.blue[700], Colors.blue[400]],
-              )
-            ),
-          accountName: Text('Bezos'),
+                gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              colors: [Colors.blue[800], Colors.blue[700], Colors.blue[400]],
+            )),
+            accountName: Text('Bezos'),
             accountEmail: Text('ad@bezos.tj'),
             currentAccountPicture: CircleAvatar(
-
-              child: Text('VV', style: TextStyle(fontWeight: FontWeight.bold,),),
+              child: Image.asset("assets/images/logo.png", width: 40, height: 40,),
               backgroundColor: Colors.blue[900],
             ),
-
           ),
 //          DrawerHeader(
 //            decoration: BoxDecoration(
@@ -52,8 +49,7 @@ class MainDrawer extends StatelessWidget {
                   title: Text(_drawerItems[index].itemsTitle),
                   leading: Icon(_drawerItems[index].itemsIcon),
                 );
-              }
-          ),
+              }),
         ],
       ),
     );
